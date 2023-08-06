@@ -18,7 +18,10 @@ public class ReadFour
                 System.out.println("Writing to file....");
 
                 PrintWriter fileOut = new PrintWriter("New text.txt");
-                fileOut.println("Hello ");
+                fileOut.println("4,");
+                fileOut.println("4,");
+                fileOut.println("4,");
+
                 fileOut.close();
 
                 System.out.println("DONE!");
@@ -27,19 +30,20 @@ public class ReadFour
                 Scanner fileIn = new Scanner(new File("New text.txt"));
                 System.out.println("Reading the file....");
 
-
-                while (fileIn.hasNext()) {
+                int sum = 0;
+                do {
 
                     String textIn = fileIn.nextLine();
                     String[] inputText = textIn.split(",");
 
-                    int sum = 0;
                     for (int i = 0; i < inputText.length; i++) {
                         sum += Integer.parseInt(inputText[i]);
                     }
 
-                    System.out.println("Done!");
-                }
+                }  while (fileIn.hasNext());
+
+                System.out.println("Done!");
+                System.out.println(sum);
 
             }
 
