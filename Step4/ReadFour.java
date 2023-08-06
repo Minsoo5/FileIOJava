@@ -21,6 +21,11 @@ public class ReadFour
                 fileOut.println("4,");
                 fileOut.println("4,");
                 fileOut.println("4,");
+                fileOut.println("4,");
+                fileOut.println("4,");
+                fileOut.println("4,");
+                fileOut.println("4,");
+
 
                 fileOut.close();
 
